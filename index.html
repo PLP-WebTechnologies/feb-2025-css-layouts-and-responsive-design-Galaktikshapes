@@ -1,0 +1,97 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+  font-family: 'Segoe UI', sans-serif; /* clean font for readability */
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* nav bar across the top */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+/* nav links look better without underline */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* this is our layout container */
+.container {
+  display: flex; /* using flexbox here */
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow boxes to wrap in small screens */
+}
+
+/* each section inside the container */
+.box {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  text-align: center;
+  min-width: 250px; /* Ensures boxes don't shrink too small */
+}
+
+/* Links look nicer */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles start here */
+
+/* for tablets and below */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack items vertically */
+    padding: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* for mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px; /* slightly larger text for small screens */
+  }
+
+  .box {
+    padding: 1rem;
+  }
+}

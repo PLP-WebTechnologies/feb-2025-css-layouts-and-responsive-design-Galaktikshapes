@@ -1,0 +1,103 @@
+/* Reset default styling to avoid inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up basic styles for the body */
+  body {
+    font-family: 'Segoe UI', sans-serif; /* Clean, easy-to-read font */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation bar styling */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navigation links styling */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Link styling */
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* When links are hovered */
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container for the layout using Flexbox */
+  .container {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap to new lines on smaller screens */
+  }
+  
+  /* Box styling for each content block */
+  .box {
+    flex: 1;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    min-width: 250px; /* Ensures the box doesn’t shrink too small on smaller screens */
+  }
+  
+  /* Link styling for "Projects" and "Contact" sections */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design with Media Queries */
+  
+  /* For tablets or smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stacks boxes vertically */
+      padding: 1rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start; /* Align navbar items to the left */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 480px) {
+    body {
+      font-size: 16px; /* Increase text size slightly for readability */
+    }
+  
+    .box {
+      padding: 1rem; /* Reduce padding on smaller screens */
+    }
+  }
+  
